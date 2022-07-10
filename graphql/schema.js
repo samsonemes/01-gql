@@ -15,4 +15,8 @@ module.exports = buildSchema(`
         courses(topic: String): [Course]
     }
 
+    type Mutation {
+        addCourse(title: String, author: String, description: String, topic: String, url: String): Course,
+        updateCourse(id: Int!, title: String, author: String, description: String, topic: String, url: String): Course,
+    } 
 `);
